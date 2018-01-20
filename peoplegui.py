@@ -1,3 +1,4 @@
+#!/usr/bin/python
 from tkinter import * 
 from tkinter.messagebox import showerror 
 from tkinter.messagebox import showinfo

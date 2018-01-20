@@ -1,3 +1,4 @@
+#!/usr/bin/python
 import os, sys 
 from http.server import HTTPServer, CGIHTTPRequestHandler
 
