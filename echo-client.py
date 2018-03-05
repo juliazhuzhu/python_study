@@ -11,6 +11,7 @@ for the standard socket calls available in the system's C library;
 
 import sys
 from socket import *
+import time
 
 serverHost = 'localhost'
 serverPort = 50007
@@ -28,6 +29,7 @@ sockobj.connect((serverHost,serverPort))
 
 for line in message:
 	sockobj.send(line)
+	print('before recve')
 	data = sockobj.recv(1024)
 	print('Client recv:', data)
 

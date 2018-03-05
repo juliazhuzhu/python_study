@@ -10,6 +10,7 @@ a remote machine, or on same computer if it uses 'localhost' for server
 """
 
 from socket import *
+import time
 
 myHost = '' 						#'' = all available interfaces on host
 myPort = 50007						# listen on a non-reserved port number
@@ -22,9 +23,10 @@ while True:
 		connection, address = sockobj.accept() # wait for next client connect
 		print('Server connected by', address)  # connection is a new socket
 		while True:
-			data = connection.recv(1024) # read next line on client socket
+			data = connection.recv(1024) # read next line on client socket #it returns when peer client close its socket
 			if not data: break
 			connection.send(b'Echo=>' + data)
+			time.sleep(5)
 		connection.close()
 
 
