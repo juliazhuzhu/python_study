@@ -1,0 +1,8 @@
+class A:public B{
+public:
+        A();
+        ~A();
+        virtual void doSomething();
+priviate:
+        int data;
+};

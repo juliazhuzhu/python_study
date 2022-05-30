@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/local/bin/python3
 """
 Client side: use sockets to send data to the server, and print server's
 reply to each message line; 'localhost' means that the server is running
@@ -23,6 +23,8 @@ if len(sys.argv) > 1:
 	serverHost = sys.argv[1]
 	if len(sys.argv) > 2:
 		message = (x.encode() for x in sys.argv[2:])
+
+print ('client send:',message)
 
 sockobj = socket(AF_INET, SOCK_STREAM)
 sockobj.connect((serverHost,serverPort))

@@ -4,7 +4,7 @@
 __author__ = 'xiaoye'
 
 import sys
-
+sys.path.append('../')
 from example import format_data
 from example import ttypes
 from thrift.transport import TSocket
